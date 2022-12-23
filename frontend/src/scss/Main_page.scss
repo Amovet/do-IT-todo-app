@@ -1,0 +1,233 @@
+/*Settings_style*/
+@import "Constant";
+@import "Animations";
+.main-page{
+  padding-top:50px;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  z-index:$background;
+  overflow-x:hidden;
+  &::-webkit-scrollbar {
+    background:  $mainColor;
+    width: 3px;
+  }
+  &::-webkit-scrollbar-thumb{
+    background:  $borderDarkColor;
+  }
+  &__container{
+    width: $maxWidth;
+    height: 100%;
+    margin: 0 auto;
+    padding: 20px 0 25px 0 ;
+  }
+  &__column{display: flex}
+  &__todos-container{
+    width: 400px;
+    height: 100%;
+
+  }
+  &__workspace-container{
+    width:850px;
+    height: 100%;
+  }
+  &__workspace{
+    border-radius: 5px;
+    margin-right: 16px;
+    border: 1px solid $borderDarkColor;
+    -webkit-box-shadow: 0px 9px 13px -3px rgba(34, 60, 80, 0.09);
+    -moz-box-shadow: 0px 9px 13px -3px rgba(34, 60, 80, 0.09);
+    box-shadow: 0px 9px 13px -3px rgba(34, 60, 80, 0.09);
+    & .workspace-item{
+      &__title{
+        margin-bottom: 0;
+        font-size: 20px;
+      }
+      &:last-child{
+        border-bottom: 1px solid $borderColor;
+      }
+      &:hover{
+        background-color: initial;
+        -webkit-box-shadow: 0px 9px 19px 2px rgba(34, 60, 80, 0.06);
+        -moz-box-shadow: 0px 9px 19px 2px rgba(34, 60, 80, 0.06);
+        box-shadow: 0px 9px 19px 2px rgba(34, 60, 80, 0.06);
+      }
+    }
+  }
+  &__block-title{
+    padding: 15px 15px;
+    border-bottom: 1px solid $borderColor;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    & img{height: 20px; padding-right: 5px}
+  }
+  &__immediate-todo{
+    min-height: 100px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid $borderDarkColor;
+    margin-bottom: 25px;
+    max-height: 333px;
+    -webkit-box-shadow: 0px 9px 13px -3px rgba(34, 60, 80, 0.09);
+    -moz-box-shadow: 0px 9px 13px -3px rgba(34, 60, 80, 0.09);
+    box-shadow: 0px 9px 13px -3px rgba(34, 60, 80, 0.09);
+    & .workspace-item{
+      &__title{
+        margin-bottom: 0;
+        font-size: 18px;
+      }
+      &:last-child{
+        border-bottom: 1px solid $borderColor;
+      }
+      &:hover{
+        background-color: initial;
+        -webkit-box-shadow: 0px 9px 19px 2px rgba(34, 60, 80, 0.06);
+        -moz-box-shadow: 0px 9px 19px 2px rgba(34, 60, 80, 0.06);
+        box-shadow: 0px 9px 19px 2px rgba(34, 60, 80, 0.06);
+      }
+    }
+  }
+  &__all-todo{
+    min-height: 100px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid $borderDarkColor;
+    margin-bottom: 25px;
+    -webkit-box-shadow: 0px 9px 13px -3px rgba(34, 60, 80, 0.09);
+    -moz-box-shadow: 0px 9px 13px -3px rgba(34, 60, 80, 0.09);
+    box-shadow: 0px 9px 13px -3px rgba(34, 60, 80, 0.09);
+    & .workspace-item{
+      &__title{
+        margin-bottom: 0;
+        font-size: 18px;
+      }
+      &:last-child{
+        border-bottom: 1px solid $borderColor;
+      }
+      &:hover{
+        background-color: initial;
+        -webkit-box-shadow: 0px 9px 19px 2px rgba(34, 60, 80, 0.06);
+        -moz-box-shadow: 0px 9px 19px 2px rgba(34, 60, 80, 0.06);
+        box-shadow: 0px 9px 19px 2px rgba(34, 60, 80, 0.06);
+      }
+    }
+  }
+  &__load{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  &__user{
+    margin-right: 16px;
+    padding: 15px 5px 5px 15px;
+    display: flex;
+    margin-bottom: 45px;
+    animation: showLeftContainer  0.3s;
+  }
+  &__block-info{
+    text-align: center;
+    padding: 15px 0;
+  }
+  &__greeting{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    padding-top: 50px;
+  }
+  &__sub-greeting{
+    text-align: center;
+    font-size: 25px;
+    padding-top: 15px;
+    font-weight: 600;
+    margin-bottom: 25px;
+  }
+  &__login{
+    border: 2px solid $borderDarkColor;
+    margin: 0 auto;
+    width: 125px;
+    padding: 10px 0;
+    text-align: center;
+    background-color: $thirdColor;
+    border-radius: 5px;
+    font-weight: 600;
+
+    &:hover{
+      background-color: $fourthColor;
+      cursor: pointer;
+    }
+  }
+  &__img-greeting{
+    position: absolute;
+    top:0;
+    margin-top: -160px;
+    width: 100%;
+    z-index: $farBack;
+  }
+  &__greeting-about{
+    margin-top:32.5%;
+    width: 100%;
+    padding: 100px 0 ;
+    text-align: center;
+    background-color: $fourthColor;
+    & div{padding-bottom: 15px}
+  }
+  &__greeting-about-title{margin-bottom: 100px}
+  &__greeting-about-msg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: $maxWidth;
+    margin: 0 auto;
+    padding-bottom: 100px!important;
+    animation: showGreetingElem 1s;
+    & div{padding: 0 15px ;width: 600px}
+    & img{padding: 0 15px}
+  }
+  &__elem-container{
+    width: 100%;
+    max-height: 235px;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      background:  $mainColor;
+      width: 3px;
+    }
+    &::-webkit-scrollbar-thumb{
+      background:  $borderDarkColor;
+    }
+    margin-bottom: 15px;
+  }
+  &__elem-workspace-container{
+    width: 100%;
+    max-height: 580px;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      background:  $mainColor;
+      width: 3px;
+    }
+    &::-webkit-scrollbar-thumb{
+      background:  $borderDarkColor;
+    }
+  }
+}
+
+.desk-img{
+  animation: showDesk 0.5s;
+}
+.window-img{
+  animation: showWindow 0.2s;
+}
+.elem1-img{
+  animation: showGreetingElem 2s;
+}
+.elem2-img{
+  animation: showGreetingElem 3s;
+}
+.pers-img{
+  animation: showGreetingElem 1s;
+}
+.chart-img{
+  animation: showChart 1s;
+}
+

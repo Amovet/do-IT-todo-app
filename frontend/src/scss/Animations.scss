@@ -1,0 +1,63 @@
+/*Animations*/
+
+@import "Constant";
+
+@keyframes showLeft {
+  from {top:-145%;filter: blur(3px);transition-timing-function: ease-in-out;opacity: 10%;}
+  to {top:0;filter: blur(0);transition-timing-function: ease-in-out;opacity: 100%;}
+}
+@keyframes showDesk {
+  from {left:-10%;top: -15%; filter: blur(14px);transition-timing-function: ease-in-out;;}
+  to {left:0;filter: blur(0);transition-timing-function: ease-in-out;}
+}
+@keyframes showChart{
+  from {right:-10%;top: -15%; filter: blur(14px);transition-timing-function: ease-in-out;;}
+  to {right:0;filter: blur(0);transition-timing-function: ease-in-out;}
+}
+
+@keyframes showWindow {
+  from { filter: blur(8px);transition-timing-function: ease-in-out;}
+  to {filter: blur(0);transition-timing-function: ease-in-out;}
+}
+
+@keyframes showGreetingElem {
+  from { filter: blur(20px);transition-timing-function: ease-in-out;}
+  to {filter: blur(0);transition-timing-function: ease-in-out;}
+}
+
+@keyframes showDropdownMenu {
+  from {filter:blur(5px); filter: opacity(25%)}
+  to {filter: blur(0); filter: opacity(100%)}
+}
+@keyframes showLoader {
+  from {filter:blur(5px); filter: opacity(25%)}
+  to {filter: blur(0); filter: opacity(100%)}
+}
+
+@keyframes showLogin {
+  from {left:-10%;filter: blur(8px);transition-timing-function: ease-in-out;;}
+  to {left:0;filter: blur(0);transition-timing-function: ease-in-out;}
+}
+
+@keyframes showLoginBackground {
+  from {left:-8%;filter: blur(16px);transition-timing-function: ease-in-out;opacity: 10%;}
+  to {left:0;filter: blur(0);transition-timing-function: ease-in-out;opacity: 100%;}
+}
+
+@keyframes showLeftBlock {
+  from {left:-7%;filter: blur(5px);}
+  to {left:0;filter: blur(0);}
+}
+@keyframes showSettings {
+  from {filter:blur(5px); filter: opacity(25%)}
+  to {filter: blur(0); filter: opacity(100%)}
+}
+@keyframes showSideMenu {
+  from {left:-10%;filter: blur(8px);transition-timing-function: ease-in-out;;}
+  to {left:0;filter: blur(0);transition-timing-function: ease-in-out;}
+}
+@keyframes showRightContainer {
+  from {right:-7%;filter: blur(3px);transition-timing-function: ease-in-out;}
+  to {right:0;filter: blur(0);transition-timing-function: ease-in-out;}
+}
+/*______________*/

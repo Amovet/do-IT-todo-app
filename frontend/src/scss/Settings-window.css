@@ -1,0 +1,191 @@
+/*Settings_style*/
+/*_________________________________________________*/
+/*______all variables are stored in this file______*/
+/*_________________________________________________*/
+/*________________values for z-index_______________*/
+/*___________________________________________________*/
+/*__________________values color_____________________*/
+/*___________________________________________________*/
+/*___________________________________________________*/
+/*__________________values size______________________*/
+/*___________________________________________________*/
+/*___________________________________________________*/
+/*__________________geometric shapes ________________*/
+/*___________________________________________________*/
+.plus {
+  background: #707070;
+  height: 12.5px;
+  width: 2px;
+  position: relative;
+  left: 5px; }
+
+.plus:after {
+  content: "";
+  height: 2px;
+  width: 12.5px;
+  background: #707070;
+  position: absolute;
+  left: -5.4px;
+  top: 5.2px; }
+
+.exit {
+  padding-right: 10px;
+  padding-bottom: 5px; }
+  .exit:before, .exit:after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 2px;
+    background: #0B0A0A; }
+  .exit:before {
+    transform: rotate(45deg); }
+  .exit:after {
+    transform: rotate(-45deg); }
+
+.exit-window {
+  position: absolute;
+  top: 14px;
+  left: 7px; }
+  .exit-window:before, .exit-window:after {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 2px;
+    background: #0B0A0A; }
+  .exit-window:before {
+    transform: rotate(45deg); }
+  .exit-window:after {
+    transform: rotate(-45deg); }
+
+/*___________________________________________________*/
+/*______________________animations __________________*/
+/*___________________________________________________*/
+.settings-window {
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  background-color: #f3f5f7;
+  overflow: auto; }
+  .settings-window::-webkit-scrollbar {
+    background: #f3f5f7;
+    width: 4px; }
+  .settings-window .header-block__title:hover {
+    background-color: #f3f5f7; }
+  .settings-window__header {
+    padding: 20px 15px 5px 35px;
+    margin-bottom: 25px; }
+  .settings-window__main-block {
+    padding: 0 16px 5px 35px; }
+  .settings-window__delete {
+    width: 100%;
+    margin-top: 50px; }
+  .settings-window__delete-container {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 15px 0px 50px 0; }
+  .settings-window__delete-click {
+    font-size: 17px;
+    color: #b70c0c; }
+    .settings-window__delete-click:hover {
+      cursor: pointer; }
+  .settings-window__delete-title {
+    margin-bottom: 10px; }
+  .settings-window__confirm-title {
+    margin-bottom: 10px;
+    font-size: 15px; }
+  .settings-window__confirm-input {
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #d2d0d0;
+    background-color: #f3f5f7;
+    padding-left: 10px;
+    margin-bottom: 10px; }
+    .settings-window__confirm-input:focus {
+      box-shadow: 0 8px 25px 2px #dddddd; }
+  .settings-window__confirm-delete {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    color: #b70c0c;
+    border: 1px solid #b70c0c;
+    background-color: #f3f5f7;
+    padding-left: 10px; }
+    .settings-window__confirm-delete:hover {
+      background-color: #E7EBEF;
+      cursor: pointer; }
+  .settings-window__style {
+    width: 100%; }
+  .settings-window__style-title {
+    padding-left: 5px;
+    margin-bottom: 20px; }
+  .settings-window__style-type {
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+  .settings-window__style-img {
+    width: 120px;
+    height: 76.5px;
+    margin: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid #d2d0d0;
+    opacity: 0.9; }
+    .settings-window__style-img:hover {
+      opacity: 1;
+      box-shadow: 0 8px 25px 6px #dddddd; }
+  .settings-window__or {
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+    font-size: 16px; }
+  .settings-window .drop-area {
+    width: 100%;
+    height: 60px;
+    margin-bottom: 15px; }
+  .settings-window__text-style {
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .settings-window__text-style-elem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin: 0 15px;
+    font-size: 17px;
+    font-weight: 600;
+    border: 1px solid #d2d0d0;
+    padding: 10px 35px; }
+    .settings-window__text-style-elem:hover {
+      opacity: 0.9; }
+
+@keyframes show {
+  from {
+    filter: blur(5px);
+    filter: opacity(25%); }
+  to {
+    filter: blur(0);
+    filter: opacity(100%); } }
+/*______________*/
+.dark-elem {
+  color: #f3f5f7;
+  background-color: #0B0A0A; }
+
+.dark {
+  color: #f3f5f7; }
+
+.bold {
+  font-weight: 600; }
+
+/*# sourceMappingURL=Settings-window.css.map */

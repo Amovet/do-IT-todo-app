@@ -1,0 +1,87 @@
+/*header_style*/
+/*_________________________________________________*/
+/*______all variables are stored in this file______*/
+/*_________________________________________________*/
+/*________________values for z-index_______________*/
+/*___________________________________________________*/
+/*__________________values color_____________________*/
+/*___________________________________________________*/
+/*___________________________________________________*/
+/*__________________values size______________________*/
+/*___________________________________________________*/
+.header {
+  width: 100%;
+  height: 50px;
+  background-color: #f3f5f7;
+  border-bottom: 1px solid #e1e1e1;
+  display: flex;
+  align-items: center; }
+  .header__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%; }
+  .header__title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 15px;
+    height: 100%; }
+  .header__name {
+    padding: 0 10px;
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 22px;
+    font-weight: 800; }
+  .header__menu {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    cursor: pointer; }
+  .header__menu-elem {
+    height: 100%;
+    padding: 0 20px; }
+  .header__user-menu {
+    margin-right: 10px; }
+  .header__side-menu-container {
+    width: 50px;
+    height: 100%;
+    border-right: 1px solid #e1e1e1; }
+  .header__profile {
+    background: #525252;
+    padding: 0 10px; }
+
+.side-menu-button {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer; }
+
+.side-menu-ico {
+  width: 25px;
+  margin: 0 auto; }
+
+.side-menu {
+  position: absolute;
+  width: 375px;
+  height: 100vh;
+  top: 50px;
+  background: #525252;
+  transform: translateX(-100%); }
+
+.side-menu.active {
+  transform: translateX(0); }
+
+.elem-menu {
+  display: flex;
+  align-items: center;
+  font-family: 'Saira Condensed', sans-serif;
+  font-size: 16px; }
+  .elem-menu__img {
+    height: 25px;
+    padding: 0 3px; }
+
+/*______________*/
+
+/*# sourceMappingURL=header.css.map */

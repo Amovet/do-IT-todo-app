@@ -1,0 +1,184 @@
+@import "Constant";
+
+//for classic container width
+@media (max-width: $maxWidth){
+    .main-page{
+        &__container{width: 100%}
+        & .small-title{width:100%;padding-right: 10px}
+        &__column{
+            flex-direction: column;
+            width: 100%;
+            padding: 0 15px;
+        }
+        &__workspace-container{width: 100%;order: 2}
+        &__todos-container{width: 100%;order: 1;display: flex;justify-content: space-between}
+        &__workspace{width: 100%;}
+        &__elem-container{max-height: initial}
+        &__immediate-todo{max-height: initial;width: 49%}
+        &__all-todo{max-height: initial;width: 49%}
+    }
+
+    .workspace{
+        &__title-container{padding: 70px 25px 0 25px;width: 100%}
+        &__title{width: 100%}
+        &__description{width: 100%}
+        &__menu{right: 15px}
+        &__container{width: 100%;}
+        &__table-container{display: block;padding: 0 15px}
+    }
+    .table{
+        width: 100%;
+        padding: 15px 15px 5px 15px;
+        margin-bottom: 10px;
+        &__container{max-height: 115px}
+    }
+    .account{
+        &__container{width: 100%;padding: 0px 15px}
+    }
+    .workspace__table-container{
+        background: rgb(22,21,21);
+        background: linear-gradient(0deg, rgba(22,21,21,1) 0%, rgba(56,56,56,1) 35%, rgba(255,255,255,0) 100%, rgba(255,255,255,0) 100%);
+    }
+}
+
+@media (max-width: 830px){
+    .elem-menu{display: none}
+    .main-page{
+        &__todos-container{width: 100%;display: initial;}
+        &__immediate-todo{max-height: initial;width: 100%}
+        &__all-todo{max-height: initial;width: 100%}
+        &__workspace-container{width: 100%;order: initial;margin-bottom: 25px}
+    }
+    .workspace{
+        &__title-container{ flex-direction: column;padding: 70px 15px 0 15px}
+        &__menu{position: initial;justify-content: flex-end}
+
+    }
+    .account{
+        &__title .title{justify-content: center;font-size: 30px;margin-bottom: 10px}
+        &__name{width: 100%}
+        &__elem-subtitle{text-align: center;font-size: 22px!important;}
+        &__elem-content{
+            padding-left: 0;
+            margin-bottom: 15px;
+            & .buttons{width: 100%; height: 44px;background-color: $fourthColor}
+            & .buttons-name{position: initial}
+        }
+    }
+    .modal{
+        width: 100%!important;
+        height: 100% !important;
+        top: 0!important;
+    }
+}
+
+@media (max-width: 700px){
+
+    .header-block{
+        &__title{font-size: 24px!important;}
+        &__exit{top: 5px}
+    }
+    .drop-area{width: 100%}
+    .todo-window{
+        &__main-block{padding: 0 15px}
+        &__header{padding: 20px 15px 5px 15px}
+    }
+    .main-block{
+        flex-direction: column;
+        &__settings{width: 100%;padding: 15px 0 0 0}
+        &__description-and-comment{order: 1}
+        &__description{padding: 15px 0 0 0}
+        &__comment-conatiner{width: 100%;}
+    }
+    .comment-container{
+        width: 100%;
+        max-width: 100%;
+        &__item{width:100%}
+    }
+}
+
+@media (max-width: 440px){
+    .settings-window__style-img{width:100px;height: 66px}
+    .header__search{display: none}
+    .login-container{
+        width: 100%;
+        margin: 18vh 0;
+        &__box{padding: 35px 25px 25px}
+    }
+    .title-container{margin-bottom: 10px!important;}
+    .account{
+        &__photo-settings-info{
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap
+        }
+        &__elem-subtitle{margin-bottom: 10px}
+        &__elem-container{padding-bottom: 20px}
+        & .title-container{padding-top: 10px}
+    }
+    .err-page{
+        top: 65px!important;
+        bottom: initial !important;
+        width: 80% !important;
+        right: 10% !important;
+        text-align: center;
+    }
+    .center-container{width: 100% !important}
+    .main-page__sub-greeting{padding: 15px 5px 0 5px}
+    .main-page__greeting-about{padding: 40px 0}
+    .main-page__greeting-about-title{ margin-bottom: 50px}
+    .main-page__greeting-about-msg{
+        flex-direction: column;
+    & img{order: 1; margin-bottom: 25px}
+    & div{order: 2}
+    }
+    .create-window__main-block{padding: 0 15px 5px 15px!important;}
+    .create-window__header{padding: 20px 15px 5px 15px!important;}
+    .header-block__title{padding:10px 0}
+    .workspace__title-container{
+        padding: 35px 15px 0 15px;
+        margin-bottom: 0;
+    }
+    .workspace__title{margin-bottom: 0}
+    .workspace__menu{margin-bottom: 10px}
+    .content__title{width: 94%}
+}
+
+//many media content for greeting background
+@media (max-width: 1820px){.main-page__img-greeting{margin-top: -8%;}}
+@media (max-width: 1730px){.main-page__img-greeting{margin-top: -7%;}}
+@media (max-width: 1640px){.main-page__img-greeting{margin-top: -6%;}}
+@media (max-width: 1540px){.main-page__img-greeting{margin-top: -5%;}}
+@media (max-width: 1480px){.main-page__img-greeting{margin-top: -4%;}}
+@media (max-width: 1390px){.main-page__img-greeting{margin-top: -3%;}}
+@media (max-width: 1300px){.main-page__img-greeting{margin-top: -2%;}}
+@media (max-width: 1250px){.main-page__img-greeting{margin-top: -1%;}}
+@media (max-width: 1200px){.main-page__img-greeting{margin-top: 0;}}
+@media (max-width: 1150px){.main-page__img-greeting{margin-top: 1%;}}
+@media (max-width: 1100px){.main-page__img-greeting{margin-top: 2%;}}
+@media (max-width: 1050px){.main-page__img-greeting{margin-top: 4%;}}
+@media (max-width: 1000px){.main-page__img-greeting{margin-top: 5%;}}
+@media (max-width: 950px){.main-page__img-greeting{margin-top: 6%;}}
+@media (max-width: 910px){.main-page__img-greeting{margin-top: 8%;}}
+@media (max-width: 860px){.main-page__img-greeting{margin-top: 10%;}}
+@media (max-width: 810px){.main-page__img-greeting{margin-top: 12%;}}
+@media (max-width: 780px){.main-page__img-greeting{margin-top: 14%;}}
+@media (max-width: 750px){.main-page__img-greeting{margin-top: 16%;}}
+@media (max-width: 700px){.main-page__img-greeting{margin-top: 18%;}}
+@media (max-width: 660px){.main-page__img-greeting{margin-top: 20%;}}
+@media (max-width: 630px){.main-page__img-greeting{margin-top: 22%;}}
+@media (max-width: 600px){.main-page__img-greeting{margin-top: 24%;}}
+@media (max-width: 580px){.main-page__img-greeting{margin-top: 26%;}}
+@media (max-width: 550px){.main-page__img-greeting{margin-top: 28%;}}
+@media (max-width: 535px){.main-page__img-greeting{margin-top: 30%;}}
+@media (max-width: 515px){.main-page__img-greeting{margin-top: 32%;}}
+@media (max-width: 500px){.main-page__img-greeting{margin-top: 34%;}}
+@media (max-width: 480px){.main-page__img-greeting{margin-top: 36%;}}
+@media (max-width: 465px){.main-page__img-greeting{margin-top: 38%;}}
+@media (max-width: 450px){.main-page__img-greeting{margin-top: 40%;}}
+@media (max-width: 440px){.main-page__img-greeting{margin-top: 42%;}}
+@media (max-width: 425px){.main-page__img-greeting{margin-top: 44%;}}
+@media (max-width: 415px){.main-page__img-greeting{margin-top: 46%;}}
+@media (max-width: 405px){.main-page__img-greeting{margin-top: 48%;}}
+@media (max-width: 390px){.main-page__img-greeting{margin-top: 50%;}}
+@media (max-width: 380px){.main-page__img-greeting{margin-top: 52%;}}

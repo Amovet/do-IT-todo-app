@@ -1,0 +1,29 @@
+@import "Constant";
+
+.eror{
+  padding-top: 50px;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  z-index: $background;
+  display: flex;
+  justify-content: center;
+  &__container{
+    margin-top: 150px;
+    width: 300px;
+    text-align: center;
+    & img{
+      width: 80%;
+      border-radius: 50%;
+      margin-bottom: 25px;
+    }
+  }
+  & .small-title{
+    margin-bottom: 25px;
+  }
+  & .remote-input{
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  & .buttons{height: 40px}
+}

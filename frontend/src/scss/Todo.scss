@@ -1,0 +1,410 @@
+@import "Constant";
+@import "Animations";
+
+
+.create-todo{
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  z-index: $TodoWindowPopUpMenu;
+  &__add-name{
+    padding-top: 150px;
+    background: #f3f5f7;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+  }
+  &__title{
+    font-size: 30px;
+    margin-bottom: 35px;
+    padding-left: 5px;
+  }
+  &__input-area{
+    height: 50px;
+    width: 85%;
+    font-size: 18px;
+    padding: 0 20px;
+    border-radius: 5px;
+    border: 1px solid $borderColor;
+    &:focus{
+      box-shadow: 0 8px 25px 6px rgba(221, 221, 221, 1);
+    }
+
+  }
+}
+
+
+.todo-window{
+  width: 100%;
+  height: 100%;
+  z-index: $todoWindow;
+  background-color: $mainColor;
+  overflow: auto;
+  overflow-x: hidden;
+  &::-webkit-scrollbar {
+    background:  $mainColor;
+    width: 4px;
+  }
+  &__header{padding: 20px 15px 5px 35px;}
+  &__main-block{padding: 0 16px 5px 35px;}
+
+}
+
+.header-block{
+  min-height: 32px;
+  position: relative;
+  &__title{
+    padding:10px 5px;
+    font-size: 25px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    background-color: $mainColor;
+    resize: none;
+    margin-top:18px;
+    border-radius: 8px;
+    min-height: 20px;
+    &:hover{
+      background-color: $thirdColor;
+    }
+    &:focus{
+      box-shadow: 0px 0px 5px 3px rgba(197, 197, 197, 0.45);
+    }
+  }
+  &__subtitle{
+    padding: 5px 15px;
+    font-size: 18px;
+    text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+  }
+  &__exit{
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 4px;
+    margin: 8px;
+    cursor: pointer;
+  }
+}
+
+.main-block{
+  display: flex;
+  width: 100%;
+  &__description-and-comment{
+    width: 100%;
+    height: 100%;
+  }
+  &__description{padding: 15px 5px 25px 0;}
+  &__settings{padding: 15px 10px 0 10px;}
+  &__subtasks-container{
+    padding: 15px 5px 25px 0;
+    animation:  showLeft 0.4s;
+  }
+  &__comment-container{padding: 15px 5px 25px 0;}
+  &__comment-info{font-size: 16px;}
+}
+
+.settings{
+  width: 30%;
+  min-width: 300px;
+  position: relative;
+  &__elem{
+    width: 100%;
+    height: 40px;
+    background-color: $thirdColor;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px 0 8px;
+    overflow: hidden;
+    font-size: 15px;
+    &:hover{
+      background-color: $fourthColor;
+      cursor: pointer;
+    }
+  }
+  &__elem-img{
+    height: 15px;
+    padding-right: 8px;
+  }
+}
+
+.subtasks-container{
+  &__subtask{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    background-color: $thirdColor;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 40px;
+    animation:  showLeft 0.4s;
+    & div{display: flex;align-items: center}
+    &-title{
+      padding-left: 10px;
+      overflow: hidden;
+    }
+    &:focus{
+      box-shadow: 0px 0px 5px 3px rgba(197, 197, 197, 0.45);
+    }
+    & .exit-container{
+      height: 20px;
+      width: 20px;
+      padding-top: 4px;
+    }
+  }
+  &__title{
+    padding-left: 5px;
+    margin-bottom: 15px;
+  }
+  &__add {
+    text-align: center;
+    padding: 10px;
+    &:hover {
+      background-color: $fourthColor;
+      border-radius: 5px;
+      cursor: pointer
+    }
+  }
+  &__subtask-title{padding-left: 10px;}
+}
+
+.description{
+  &__title{
+  margin-bottom: 15px;
+  padding-left: 5px;
+  }
+  &__text{
+    padding: 10px;
+    min-height: 85px;
+    max-height: 250px;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 14px;
+    background-color: $mainColor;
+    text-align: left;
+    resize: vertical;
+    &:hover{
+      background-color: $thirdColor;
+    }
+    &:focus{
+      background-color: $thirdColor;
+      box-shadow: 0px 0px 5px 3px rgba(197, 197, 197, 0.45);
+    }
+  }
+  &__length{
+    width: 100%;
+    font-size: 12px;
+    text-align: right;
+    padding-right: 15px;
+    padding-top: 5px;}
+}
+
+.comment-container{
+  max-width: 417px;
+  &__title{
+    padding-left: 5px;
+    margin-bottom: 15px;
+  }
+  &__is-empty{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 8px;
+    min-height: 100px;
+    &:hover{
+      background-color: $thirdColor;
+    }
+    & img{
+      height: 32px;
+      margin-bottom: 5px;
+    }
+  }
+  &__ready{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 8px;
+    min-height: 100px;
+    & img{
+      height: 32px;
+      margin-bottom: 5px;
+    }
+  }
+  &__item{
+    display: flex;
+    margin-bottom: 15px;
+    width: 412px;
+  }
+  &__img{
+    & img{
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+    }
+    & div{
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background-color: $fourthColor;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+    }
+  }
+  &__content{
+    padding-left: 10px;
+  }
+  &__create{
+    width: 100%;
+    display: flex;
+    height: 35px;
+    align-items: center;
+
+    & input{
+      width: 100%;
+      height: 30px;
+      border-radius: 5px;
+      padding: 0 10px;
+      background-color: $mainColor;
+      border: 1px solid $borderDarkColor;
+      &:focus{
+        box-shadow: 0px 0px 5px 3px rgba(197, 197, 197, 0.45);
+      }
+
+    }
+
+  }
+  &__add{
+    width:40px;
+    padding-left: 12px;
+    display: flex;
+    align-items: center;
+    & img{
+      height: 25px;
+    }
+  }
+  &__time{
+    padding: 10px 0 5px 0;
+    font-size: 12px;
+  }
+}
+.content{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  &__title{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3px;
+    font-weight: 600;
+    & div{
+      overflow: hidden;
+      padding-bottom: 6px;
+    }
+    & .exit-container {
+      height: 20px;
+      width: 20px;
+    }
+
+  }
+  &__content{
+    max-height:65px;
+    width: 370px;
+    word-wrap: break-word;
+    & span{
+      font-size: 14px;
+      text-decoration: underline;
+    }
+  }
+
+}
+.setting-popup-menu{
+  width:280px;
+  padding: 10px 0px;
+  background-color: $thirdColor;
+  position: absolute;
+  z-index: $TodoWindowPopUpMenu;
+  border-radius: 5px;
+  &__elem{
+    padding: 10px 15px;
+    &:hover{
+      background-color: $fourthColor;
+    }
+  }
+}
+.drop-area{
+  width: 280px;
+  height: 50px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: dashed 2px $borderDarkColor;
+  border-radius: 5px;
+
+}
+.files-item{
+  display: flex;
+  width: 100%;
+  padding: 5px 50px 5px 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  justify-content: space-between;
+  position: relative;
+  & div{padding-left: 5px;cursor: pointer;position: absolute;right: 0}
+}
+.input-end-date{
+  width: 280px;
+  margin-bottom: 10px;
+  padding: 10px 0 0 5px;
+  &__title{
+    margin-bottom: 8px;
+    font-size: 15px;
+
+  }
+  &__input{
+    width: 100%;
+    height: 30px;
+    background-color: $mainColor;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border:solid 1px $borderColor ;
+    font-size: 16px;
+  }
+  &__button{
+    font-size: 15px;
+    background-color: $fourthColor ;
+    padding: 5px 10px;
+    border-radius: 4px;
+    &:hover{
+      background-color: $fifthColor;
+    }
+  }
+}
+
+
+.task-done{
+  text-decoration: line-through;
+  position: relative;
+}
+
+

@@ -1,0 +1,304 @@
+@import "null-style";
+@import "header";
+@import "login";
+@import "Constant";
+@import "workspace";
+@import "Todo";
+@import "Settings-window";
+@import "Account";
+@import "Workspace_follow";
+@import "Main_page";
+@import "Style_media";
+@import "Animations";
+@import "Eror";
+body {
+  background-color: $mainColor;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    background: $mainColor;
+    width: 3px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $borderDarkColor;
+  }
+}
+
+.sub_small {
+  color: $subColor;
+  font-size: 12px;
+}
+
+.sub {
+  color: $subColor;
+}
+
+.bottom-border {
+  border-bottom: 1px solid $borderDarkColor;
+}
+
+.load-app {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: $mainColor;
+  display: flex;
+  justify-content: space-around;
+  z-index: $init;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: $loading;
+    margin-top: 250px;
+    top: 0;
+  }
+
+  &__loader {
+    height: 250px;
+    animation: showLoader 0.5s;
+  }
+
+  &__title {
+    font-size: 17px;
+    padding-top: 15px;
+    margin: 0 auto;
+  }
+}
+
+.modal {
+  position: relative;
+  display: flex;
+  top: 80px;
+  margin: 0 auto;
+  width: $widthModalWindow;
+  height: 80%;
+  background: $mainColor;
+  border-radius: 8px;
+
+}
+
+.modal-background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: $modalBackground;
+  background-color: rgba(11, 10, 10, 0.35);
+}
+
+
+/////medium title
+.medium-title {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.small-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+
+////window
+.window {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.err-page {
+  position: absolute;
+  bottom: 40px;
+  right: 25px;
+  font-size: 16px;
+  color: $secondColor;
+  background-color: $fourthColor;
+  border-radius: 8px;
+  z-index: $Err;
+  padding: 10px 25px;
+
+  & div {
+    margin: 0 auto
+  }
+}
+
+.main {
+  color: $secondColor;
+}
+
+
+//scroll bar
+::-webkit-scrollbar {
+  background: $mainColor;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $fourthColor;
+  border-radius: 5px;
+}
+
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+//commune elements and containers save there
+.title-container {
+  display: flex;
+  padding: 100px 25px 0 25px;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.main-container {
+  display: flex;
+  width: 100%;
+}
+
+.title {
+  display: flex;
+  font-size: 45px;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-right: 5px;
+  width: 800px;
+  height: 65px;
+  align-items: center;
+  border-radius: 5px;
+  margin-bottom: 25px;
+}
+
+.buttons {
+  padding: 0 25px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  justify-content: center;
+  border-radius: 5px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+//colors
+.bg-gray-light {
+  background-color: $thirdColor;
+
+  &:hover {
+    background-color: $fourthColor;
+  }
+}
+
+.bg-and-border-red {
+  border: 1px solid #b70c0c;
+  color: #b70c0c;
+
+  &:hover {
+    border: 1px solid #7c0a0a;
+    color: #7c0a0a;
+  }
+}
+
+.dnd-load-user-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 120px;
+
+  & .drop-area__title {
+    font-weight: 600;
+    font-size: 15px;
+  }
+
+  & span {
+    padding: 8px;
+  }
+}
+
+.border-solid-gray {
+  border: 2px solid $borderColor;
+}
+
+.dnd-load-background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75px;
+  width: 100%;
+  margin-bottom: 15px;
+
+  & .drop-area__title {
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  & span {
+    padding: 5px;
+    font-size: 12px;
+  }
+
+  & input {
+    background-color: $mainColor;
+  }
+
+}
+
+.input-file {
+  position: relative;
+  display: inline-block;
+
+  & span {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+    background-color: $mainColor;
+    border: 1px solid $borderColor;
+    padding: 8px 25px;
+    transition: background-color 0.2s;
+
+  }
+
+  & input[type=file] {
+    position: absolute;
+    z-index: $farBack;
+    opacity: 0;
+    display: block;
+    width: 0;
+    height: 0;
+  }
+
+  &:hover span {
+    background-color: $fourthColor;
+  }
+}
+
+.center-container {
+  width: 400px;
+  margin: 0 auto;
+
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.imgi {
+  width: 400px;
+}

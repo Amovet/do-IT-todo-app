@@ -1,0 +1,357 @@
+/*header_style*/
+@import "Constant";
+@import "Animations";
+.workspace{
+  padding-top: 50px;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+  &__load{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  &__filter{
+    position: absolute;
+    right: 35px;
+    font-size: 18px;
+    bottom: 15px;
+    cursor: pointer;
+  }
+  &__load-container{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: $loading;
+    margin: 250px auto 0;
+    top: 0;
+  }
+  &__loader{
+    height: 250px;
+    animation:  showLoader 0.5s;
+  }
+  &__load-title{
+    font-size: 17px;
+    padding-top: 15px;
+    margin: 0 auto;
+  }
+  &__container{
+    max-width: $maxWidth;
+    margin: 0 auto;
+    height: 100%;
+  }
+  &__title-container{
+    display: flex;
+    padding: 100px 25px 0px 25px ;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 40px;
+  }
+  &__title{
+    font-size: 45px;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-right: 5px;
+    width: 800px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    justify-content: space-between;
+    &:focus{
+      background-color: $thirdColor;
+      padding-left: 10px;
+      box-shadow: 0 8px 25px 2px rgba(221, 221, 221, 1);
+    }
+  }
+  &__description{
+    width: 800px;
+    overflow: hidden;
+    border-radius: 5px;
+    display: flex;
+    height: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    align-items: center;
+    cursor: pointer;
+    &:focus{
+      background-color: $thirdColor;
+      padding-left: 10px;
+      box-shadow: 0 8px 25px 2px rgba(221, 221, 221, 1);
+    }
+  }
+  &__menu{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-right: 5px;
+  }
+  &__menu-item{
+      width: 24px;
+      margin-left: 10px;
+      &:hover{cursor: pointer}
+      & img{width: 24px}
+  }
+  &__menu-more{
+    position: absolute;
+    margin-top: 28px;
+    border-radius: 5px;
+    color: black;
+    right: 15px;
+    width: 150px;
+    padding: 0 15px;
+    background-color: $thirdColor;
+    border: 1px solid $borderDarkColor;
+    box-shadow: 0 8px 25px 2px rgba(221, 221, 221, 1);
+    & div{
+      margin: 15px 0;
+    }
+  }
+  &__menu-filter{
+    position: absolute;
+    margin-top: 190px;
+    border-radius: 5px;
+    font-size: 16px;
+    color: black;
+    right: 15px;
+    width: 150px;
+    background-color: $thirdColor;
+    border: 1px solid $borderDarkColor;
+    box-shadow: 0 8px 25px 2px rgba(221, 221, 221, 1);
+    cursor: pointer;
+    & div{
+      padding: 10px 15px;
+      &:hover{background-color: $fourthColor}
+    }
+  }
+  &__table-container{width: 100%;display: flex;justify-content: space-between}
+  &__view-all{
+    height: 35px;
+    width: 100%;
+    padding: 10px 25px;
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius:  5px;
+    &:hover{
+      cursor: pointer;
+      background-color: $fourthColor;
+    }
+  }
+  &__info{
+    padding-top: 120px;
+    text-align: center;
+    font-size: 24px;
+  }
+}
+
+.workspace-item{
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px 25px;
+  border-bottom: 1px solid $borderDarkColor;
+  &__status{
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  &:last-child{
+    border-bottom: 0px;
+    margin-bottom: 0px;
+  }
+  &:hover{
+    cursor: pointer;
+    background-color: $thirdColor;
+    border-radius: 5px;
+  }
+  &__date{
+    white-space: nowrap;
+  }
+
+  &__title-container{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title{
+    font-size: 24px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  &__description{
+    color: $subColor;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    letter-spacing:2px;
+
+  }
+}
+.exit-container{
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center
+}
+
+.table{
+  width: 400px;
+  height: 100%;
+  border: 2px solid $borderDarkColor;
+  background-color: $thirdColor;
+  padding:25px 10px 5px 10px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  &__title{
+    font-size:1.5rem;
+    font-weight: 700;
+    padding-left: 10px;
+    width: 100%;
+    padding-bottom: 5px;
+  }
+  &__add-todo{
+    width: 100%;
+    padding: 15px 10px ;
+    font-weight: 600;
+    letter-spacing: 1.1px;
+    display: flex;
+    align-items: center;
+    color:$subColor;
+    &-title{padding-left: 15px}
+    &:hover{
+      cursor: pointer;
+    }
+  }
+  &__info{
+    padding: 15px 0;
+  }
+  &__container{
+    width: 100%;
+    max-height: 445px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      background:  $thirdColor;
+      width: 3px;
+    }
+    &::-webkit-scrollbar-thumb{
+      background:  $borderDarkColor;
+    }
+  }
+}
+.item{
+  width: 100%;
+  border: 2x solid $borderDarkColor;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 15px 10px;
+  border-radius: 6px;
+  background-color: $fourthColor;
+
+}
+.item-container{
+  width: 100%;
+  height: 50px;
+  margin: 5px 0;
+  cursor: pointer;
+  &:focus{
+    cursor:grab;
+  }
+  &:active{
+    cursor:grabbing;
+  }
+}
+
+.item-container-create{
+  width: 100%;
+  height: 50px;
+  margin: 5px 0;
+  cursor: pointer!important;
+  font-size: 14px;
+  & input:focus{
+  box-shadow: 0px 0px 5px 3px rgb(180, 180, 180);
+}
+}
+
+.block .item-container{
+  cursor:not-allowed!important;
+}
+
+.table-hover-todo{
+  @extend.table;
+  & .table__title{
+    margin-bottom: 50px;
+  }
+
+}
+
+.background{
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  opacity: 95%;
+  z-index: $background;
+}
+
+.create-window{
+  width: 100%;
+  height: 100%;
+  z-index: $todoWindow;
+  background-color: $mainColor;
+  overflow: auto;
+  position: relative;
+  &::-webkit-scrollbar {
+    background:  $mainColor;
+    width: 4px;
+  }
+  & .header-block__title:hover{background-color: $mainColor }
+  &__header{padding: 20px 15px 5px 35px;margin-bottom: 25px}
+  &__main-block{padding: 0 16px 5px 35px;}
+  &__elem{width: 100%}
+  &__title{margin-bottom: 20px}
+  & .workspace__title{
+    font-size: 35px;
+    height: 55px;
+    width: 100%;
+    border-radius: 8px;
+    background-color: $mainColor;
+    border: 1px solid $borderColor;
+    margin-bottom: 0;
+    &:hover{background-color: $thirdColor}
+    &:focus{background-color: $thirdColor}
+  }
+  &__help{
+    width: 100%;
+    text-align: right;
+    padding: 8px 15px 25px 0;
+  }
+  & .description__text{
+    border: 1px solid $borderColor;
+    height: 320px;
+  }
+  &__button{
+    position: absolute;
+    bottom: 25px;
+    right: 16px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: $fourthColor;
+    &:hover{
+      background-color: $fifthColor;
+      cursor: pointer;
+    }
+  }
+}
+
+
+
+

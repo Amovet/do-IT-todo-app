@@ -1,0 +1,135 @@
+/*Settings_style*/
+/*_________________________________________________*/
+/*______all variables are stored in this file______*/
+/*_________________________________________________*/
+/*________________values for z-index_______________*/
+/*___________________________________________________*/
+/*__________________values color_____________________*/
+/*___________________________________________________*/
+/*___________________________________________________*/
+/*__________________values size______________________*/
+/*___________________________________________________*/
+/*___________________________________________________*/
+/*__________________geometric shapes ________________*/
+/*___________________________________________________*/
+.plus {
+  background: #707070;
+  height: 12.5px;
+  width: 2px;
+  position: relative;
+  left: 5px; }
+
+.plus:after {
+  content: "";
+  height: 2px;
+  width: 12.5px;
+  background: #707070;
+  position: absolute;
+  left: -5.4px;
+  top: 5.2px; }
+
+.exit {
+  padding-right: 10px;
+  padding-bottom: 5px; }
+  .exit:before, .exit:after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 2px;
+    background: #0B0A0A; }
+  .exit:before {
+    transform: rotate(45deg); }
+  .exit:after {
+    transform: rotate(-45deg); }
+
+.exit-window {
+  position: absolute;
+  top: 14px;
+  left: 7px; }
+  .exit-window:before, .exit-window:after {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 2px;
+    background: #0B0A0A; }
+  .exit-window:before {
+    transform: rotate(45deg); }
+  .exit-window:after {
+    transform: rotate(-45deg); }
+
+/*___________________________________________________*/
+/*______________________animations __________________*/
+/*___________________________________________________*/
+.account {
+  padding-top: 50px;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  z-index: 0; }
+  .account .title-container {
+    padding-top: 50px; }
+  .account__container {
+    width: 1266px;
+    height: 100%;
+    margin: 0 auto; }
+  .account__title {
+    border-bottom: 2px solid #e1e1e1; }
+  .account__elem-container {
+    width: 100%;
+    padding-bottom: 35px; }
+  .account__elem-subtitle {
+    margin-bottom: 25px; }
+  .account__main {
+    flex-direction: column; }
+  .account__photo {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px; }
+  .account__photo-settings {
+    width: 100%;
+    height: 100px;
+    padding-left: 25px;
+    position: relative; }
+  .account__photo-container {
+    width: 100px;
+    height: 100%; }
+  .account__photo-settings-info {
+    position: absolute;
+    bottom: 0; }
+  .account__photo-settings-buttons {
+    position: absolute;
+    bottom: 25px;
+    display: flex; }
+    .account__photo-settings-buttons div {
+      margin-right: 10px; }
+  .account__elem-content {
+    padding-left: 25px; }
+  .account__elem-photo {
+    margin-bottom: 35px; }
+  .account__name {
+    width: 40%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    background-color: #E7EBEF;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 40px; }
+    .account__name:focus {
+      box-shadow: 0px 0px 5px 3px rgba(197, 197, 197, 0.45); }
+  .account__name-info {
+    padding: 5px 0 0 15px;
+    margin-bottom: 25px; }
+  .account__name-container {
+    margin-bottom: 55px; }
+
+.buttons-name {
+  position: absolute; }
+
+/*# sourceMappingURL=Main_page.css.map */

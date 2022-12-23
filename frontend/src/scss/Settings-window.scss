@@ -1,0 +1,290 @@
+/*Settings_style*/
+@import "Constant";
+.settings-window{
+  width: 100%;
+  height: 100%;
+  z-index: $todoWindow;
+  background-color: $mainColor;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    background:  $mainColor;
+    width: 4px;
+  }
+  & .header-block__title:hover{background-color: $mainColor }
+  &__header{padding: 20px 15px 5px 35px;margin-bottom: 25px}
+  &__main-block{padding: 0 16px 5px 35px;}
+  &__delete{
+    width: 100%;
+    margin-top:50px;
+  }
+  &__delete-container{
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 15px 0px 50px 0;
+  }
+  &__delete-click{
+    font-size: 17px;
+    color: #b70c0c;
+    &:hover{cursor: pointer}
+  }
+  &__background{
+    width: 100%;
+  }
+  &__confirm-title{
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+  &__confirm-input{
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid $borderDarkColor;
+    background-color: $mainColor;
+    padding-left: 10px ;
+    margin-bottom: 10px;
+    &:focus{box-shadow: 0 8px 25px 2px rgba(221, 221, 221, 1);}
+  }
+  &__confirm-delete{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    color: #b70c0c;
+    border: 1px solid #b70c0c;
+    background-color: $mainColor;
+    &:hover{
+      background-color: $thirdColor;
+      cursor: pointer;
+    }
+
+  }
+  &__style{width: 100%}
+  &__title{
+    padding: 10px 0 10px 5px;
+    margin-bottom: 25px;
+    display: flex;
+    cursor: pointer;
+    & img{
+      width: 24px;
+      margin-left: 5px;
+    }
+  }
+  &__style-type{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  &__style-img{
+    width: 120px;
+    height: 76.5px;
+    margin: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid $borderDarkColor;
+    opacity: 0.9;
+    &:hover{
+      opacity: 1;
+      box-shadow: 0 8px 25px 6px rgba(221, 221, 221, 1);
+    }
+  }
+  &__or{
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+    font-size: 16px;
+  }
+  &__text-style{
+    width: 100%;
+    padding: 0 15px 40px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__text-style-elem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin:0 15px;
+    font-size: 17px;
+    font-weight: 600;
+    border: 1px solid $borderDarkColor;
+    padding:10px 35px;
+    &:hover{opacity: 0.9}
+  }
+  &__owner-title{
+    margin-bottom: 25px;
+  }
+  &__owner-content{
+    display: flex;
+    width: 100%;
+    padding-left: 5px;
+    margin-bottom: 25px;
+  }
+  &__owner-info-title{
+    margin-bottom: 5px;
+    font-size: 18px;
+  }
+  &__owner-info{
+    padding-left: 10px;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid $borderColor;
+    white-space: nowrap;
+    overflow: hidden;
+
+  }
+  &__owner-photo{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+  }
+  &__guest{margin-bottom: 25px;}
+  &__guest-elem{
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding-left: 15px;
+    & .exit-container{
+      position: absolute;
+      right: 5px;
+    }
+  }
+  &__guest-elem-photo{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+  }
+  &__guest-info-title{
+    width: 100%;
+    padding-left: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 16px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $borderColor;
+
+  }
+  &__remote-create{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  &__remote-title{
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+  &__remote-create-info{
+    font-size: 12px;
+     padding: 0 0 10px 0 ;
+  }
+  &__remote-get-link-container{
+     width: 300px;
+     margin: 0 auto;
+    & .buttons{
+      margin-bottom: 15px;
+    }
+  }
+  &__remote-link{
+    width: 100%;
+    position: relative;
+    height: 30px;
+    padding-right: 25px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    cursor: pointer;
+    & div{
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    & img{
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      height: 16px;
+    }
+  }
+  &__remote-min-title{
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  &__remote-create-container{
+    & .remote-input{
+      height: 30px;
+      padding: 0 10px 0 10px;
+      min-height: 30px;
+    }
+    & .buttons{
+      width: 40%;
+      margin: 0 auto;
+    }
+  }
+  &__guest-invite{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    & img{width: 55px;margin-bottom: 10px}
+  }
+  &__guest-info{
+    margin-bottom: 10px;
+  }
+}
+.remote-input{
+  width: 40%;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 15px;
+  background-color: $mainColor;
+  margin-bottom: 10px;
+  min-height: 40px;
+  border: 1px solid $borderDarkColor;
+  &:focus{
+    box-shadow: 0px 0px 5px 3px rgba(197, 197, 197, 0.45);
+  }
+}
+
+
+
+
+
+.indicator{
+  position: absolute;
+  right: 25px;
+}
+/*______________*/
+.dark-elem{
+  color: $mainColor;
+  background-color: $darkButton;
+}
+.dark{
+  color: $mainColor;
+}
+
+.bold{
+  font-weight: 600;
+}

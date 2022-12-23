@@ -1,0 +1,76 @@
+/*_________________________________________________*/
+/*______all variables are stored in this file______*/
+/*_________________________________________________*/
+/*________________values for z-index_______________*/
+/*___________________________________________________*/
+/*__________________values color_____________________*/
+/*___________________________________________________*/
+/*___________________________________________________*/
+/*__________________values size______________________*/
+/*___________________________________________________*/
+.login-container {
+  width: 400px;
+  margin: 180px auto;
+  position: relative;
+  height: 100vh; }
+  .login-container__box {
+    width: 95%;
+    max-width: 100%;
+    margin: 2em auto;
+    padding: 35px 35px 50px;
+    box-shadow: 0 0 10px 5px #dddddd; }
+  .login-container__input-container {
+    margin: 0 0 10px 0; }
+  .login-container__title {
+    font-size: 15px; }
+  .login-container__registration {
+    margin-top: 35px; }
+  .login-container__input-area {
+    width: 100%;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: #E7EBEF;
+    color: black;
+    padding: 0 15px; }
+  .login-container__eror {
+    padding-bottom: 15px; }
+  .login-container__signup {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+  .login-container__or {
+    justify-content: space-around;
+    margin-bottom: 10px; }
+  .login-container__submit {
+    background-color: #0B0A0A;
+    color: #f3f5f7;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-family: 'Syne', sans-serif; }
+    .login-container__submit.login {
+      margin-bottom: 20px; }
+  .login-container__logo {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 30px; }
+  .login-container__img {
+    height: 45px; }
+  .login-container__title {
+    margin-bottom: 30px;
+    font-size: 40px;
+    font-weight: 800; }
+  .login-container__name {
+    padding: 0 10px;
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 30px;
+    font-weight: 800; }
+
+/*# sourceMappingURL=Login.css.map */

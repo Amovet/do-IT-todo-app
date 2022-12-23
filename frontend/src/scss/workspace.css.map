@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,gBAAgB;ACAhB,qDAAqD;AACrD,qDAAqD;AACrD,qDAAqD;AAErD,qDAAqD;AAGrD,uDAAuD;AACvD,uDAAuD;AACvD,uDAAuD;AAWvD,uDAAuD;AACvD,uDAAuD;AACvD,uDAAuD;ADnBvD,kBAAkB",
+"sources": ["workspace.scss","Constant.scss"],
+"names": [],
+"file": "workspace.css"
+}

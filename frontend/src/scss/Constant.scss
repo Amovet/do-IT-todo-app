@@ -1,0 +1,77 @@
+/*_________________________________________________*/
+/*______all variables are stored in this file______*/
+/*_________________________________________________*/
+
+/*________________values for z-index_______________*/
+
+$farBack:-1;
+$background:0;
+$init:1;
+$loading:2;
+$header:3;
+$todoWindow:4;
+$modalBackground:4;
+$TodoWindowPopUpMenu:5;
+$Err:6;
+
+/*___________________________________________________*/
+/*__________________values color_____________________*/
+/*___________________________________________________*/
+$mainColor:#f3f5f7;
+$secondColor: #0B0A0A;
+$thirdColor:#E7EBEF;
+$fourthColor:#CED6DE;
+$fifthColor:#9DADBE;
+$subColor: #707070;
+$borderColor: #e1e1e1;
+$borderDarkColor: #d2d0d0;
+//elements colors
+$loginInputColor:$thirdColor;
+$darkButton:$secondColor;
+$sixColor: #efeff3;
+/*___________________________________________________*/
+/*__________________values size______________________*/
+/*___________________________________________________*/
+$maxWidth:1266px;
+$widthModalWindow:768px;
+
+/*___________________________________________________*/
+/*__________________geometric shapes ________________*/
+/*___________________________________________________*/
+.plus {
+  background: $subColor;
+  height: 12.5px;
+  width: 2px;
+  position: relative;
+  left: 5px;
+}
+.plus:after {
+  content: "";
+  height: 2px;
+  width: 12.5px;
+  background: $subColor;
+  position: absolute;
+  left: -5.4px;
+  top: 5.2px;
+}
+
+.exit {
+  padding-right: 10px;
+  padding-bottom: 5px;
+  &:before, &:after {content: ""; position: absolute; width: 12px; height: 2px; background: $secondColor;}
+  &:before {transform: rotate(45deg);}
+  &:after {transform: rotate(-45deg);}
+}
+
+.exit-window {
+  position: absolute;
+  top: 14px;
+  left:7px;
+  &:before, &:after {content: ""; position: absolute; width: 18px; height: 2px; background: $secondColor;}
+  &:before {transform: rotate(45deg);}
+  &:after {transform: rotate(-45deg);}
+}
+/*___________________________________________________*/
+/*______________________animations __________________*/
+/*___________________________________________________*/
+
